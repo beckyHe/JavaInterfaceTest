@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SuiteTest">
+    <test name="login">
+        <classes>
+            <class name="com.course.suite.SuiteConfig"/>
+            <class name="com.course.suite.Login"></class>
+        </classes>
+    </test>
+
+    <test name="pay">
+        <classes>
+            <class name="com.course.suite.SuiteConfig"/>
+            <class name="com.course.suite.Pay"></class>
+        </classes>
+    </test>
+
+
+    <test name="GroupTest">
+        <groups>
+            <run>
+                <include name="animal"></include>
+                <include name="stu"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.course.suite.SuiteConfig"/>
+            <class name="com.course.group.StudGroup"></class>
+
+
+        </classes>
+
+    </test>
+
+    <test name="parameterTest">
+        <parameter name="name" value="zhangsan" />
+        <parameter name="age" value="12"/>
+        <classes>
+            <class name="com.course.data.ParameterTest"/>
+        </classes>
+
+    </test>
+
+
+
+
+</suite>
